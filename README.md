@@ -1,2 +1,2 @@
 # memory-game
-Projeto de jogo da memória
+Projeto de jogo da memória usando emojis
