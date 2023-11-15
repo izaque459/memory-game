@@ -43,6 +43,19 @@ function handleClick(){
 }
 
 function checkMatch(){
+    if(openCards[0].innerHTML===openCards[1].innerHTML){
+        openCards[0].classList.add("boxMatch");
+        openCards[1].classList.add("boxMatch");
+    }else{
+        open.classList[0].remove("boxMatch");
+        open.classList[1].remove("boxMatch");
 
+    }
+
+    openCards=[];
+
+    if(document.querySelectorAll(".boxMatch").length==emojis.length){
+        alert("Você Vence!");
+    }
 }
 
