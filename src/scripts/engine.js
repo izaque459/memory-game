@@ -21,13 +21,11 @@ let openCards =[];
 let shuffleEmojis = emojis.sort( ()=>( Math.random() > 0.5 ? 2 : -1 ) );
 
 for(let i=0; i< emojis.length; i++){
-    let box = document.createElement
-                ("div");
+    let box = document.createElement("div");
                 box.className = "item";
                 box.innerHTML = shuffleEmojis[i];
                 box.onclick = handleClick;
-                document.querySelector(".game")
-                .appendChild(box);
+                document.querySelector(".game").appendChild(box);
 }
 
 
@@ -40,6 +38,7 @@ function handleClick(){
     if(openCards.length==2){
         setTimeout(checkMatch, 500);
     }
+    console.log(openCards);
 }
 
 function checkMatch(){
@@ -47,8 +46,8 @@ function checkMatch(){
         openCards[0].classList.add("boxMatch");
         openCards[1].classList.add("boxMatch");
     }else{
-        open.classList[0].remove("boxMatch");
-        open.classList[1].remove("boxMatch");
+        openCards[0].classList.remove("boxOpen");
+        openCards[1].classList.remove("boxOpen");
 
     }
 
